@@ -11,7 +11,7 @@
 
 - 💬 Ask me about **Bootstrap, HTML, CSS and git (Version Control)**
 
-- 📫 How to reach me **hamzahchhapra@gmail.com**
+- 📫 How to reach me **chhaprahamzah@gmail.com**
 
 - ⚡ Fun fact **I am lazyyy**
 
