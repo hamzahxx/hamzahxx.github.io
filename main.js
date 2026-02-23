@@ -17,7 +17,6 @@ gsap.from("#about-content", {
         trigger:"#about-content",
         scroller:"body",
         start: "top 50%",
-        markers:true
     },
 });
 gsap.from("#skills", {
@@ -27,7 +26,6 @@ gsap.from("#skills", {
         trigger:"#skills",
         scroller:"body",
         start: "top 65%",
-        markers:true
     },
 });
 
