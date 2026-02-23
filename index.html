@@ -28,17 +28,16 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <nav
-        class="fixed top-0 left-0 w-full bg-[white] backdrop-blur-[10px] shadow-[0_2px_10px_rgba(0,0,0,0.1)] z-[1000] p-3">
+    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-[10px] z-[1000] p-3">
         <div class="max-w-[1320px] mx-auto px-8 py-3 flex justify-between items-center">
-            <a href="/" class="font-[Montserrat] font-bold text-xl">
+            <a id="title" href="/" class="font-[Montserrat] font-bold text-xl">
                 hamzahcodes.in
             </a>
 
@@ -96,8 +95,8 @@
     </nav>
 
     <!-- FRONT PAGE -->
-    <section id="home" class=" bg-[#E3F4F4] pt-36 overflow-hidden" aria-label="Hero section">
-        <div class="grid grid-cols-1 md:grid-cols-2">
+    <section id="home" class="pt-36 overflow-hidden" aria-label="Hero section">
+        <div id="home-content" class="grid grid-cols-1 md:grid-cols-2">
             <div class="p-3 md:p-10 md:py-16">
                 <p class="font-[Montserrat] text-[23px] mb-2 pl-1">Hello, my name is</p>
                 <h1 class="text-[400%] leading-[90%] font-[Montserrat] font-bold max-md:text-[300%] mb-2">Hamzah
@@ -116,12 +115,15 @@
                     </ul>
                 </div>
                 <div class="flex ms-2">
-                    <a href="https://x.com/copypastecoder7" aria-label="Follow me on X (Twitter)" target="_blank"><img
-                            src="images/svg/x.svg" alt="x-copypastecoder7" class="w-10 mt-2.5 mr-[30px]"></a>
-                    <a href="https://github.com/hamzahxx" aria-label="Check out my Github Profile" target="_blank"><img
+                    <a href="https://x.com/copypastecoder7" aria-label="Follow me on X (Twitter)" target="_blank"
+                        class="transition-all duration-300 hover:opacity-70 hover:scale-110"><img src="images/svg/x.svg"
+                            alt="x-copypastecoder7" class="w-10 mt-2.5 mr-[30px]"></a>
+                    <a href="https://github.com/hamzahxx" aria-label="Check out my Github Profile" target="_blank"
+                        class="transition-all duration-300 hover:opacity-70 hover:scale-110"><img
                             src="images/svg/github.svg" alt="github-hamzahxx" class="w-10 mt-2.5 mr-[30px]"></a>
                     <a href="https://www.linkedin.com/in/hamzahchhapra/" aria-label="Connect with me on LinkedIn"
-                        target="_blank"><img src="images/svg/linkedin.svg" alt="linkedin-hamzahchhapra"
+                        target="_blank" class="transition-all duration-300 hover:opacity-70 hover:scale-110"><img
+                            src="images/svg/linkedin.svg" alt="linkedin-hamzahchhapra"
                             class="w-10 mt-2.5 mr-[30px]"></a>
                 </div>
             </div>
@@ -134,105 +136,111 @@
     </section>
 
     <!-- SECOND PAGE -->
-    <section id="about" class="bg-[#F8F6F4] h-[110%]">
-        <div class="container mx-auto px-4 pb-[15%]">
-            <div class="flex justify-center py-5">
-                <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">About me</h1>
-            </div>
-            <div class="grid md:grid-cols-5">
-                <div class="grid grid-cols-1 place-items-center md:col-span-2">
-                    <img src="images/body/hamzah.jpeg" alt="me" class="w-[60%] md:w-[80%] h-auto rounded-[4%]">
+    <section id="about" class="bg-[#f8f6f4]">
+        <div class="container mx-auto px-4 py-12">
+            <div id="about-content">
+                <div class="flex justify-center py-5">
+                    <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">About me</h1>
                 </div>
-                <div class="text-center mt-8 md:mt-0 md:text-left md:col-span-3 place-content-center">
-                    <h4 class="font-bold text-xl md:text-2xl lg:text-3xl">I'm Hamzah Chhapra, a Software Developer </h4>
-                    <p class="text-md md:text-lg lg:text-xl">I am currently in my final year of BCA studies from Manipal
-                        University Jaipur, I find great joy in designing and developing websites. However, my ambitions
-                        extend
-                        beyond the web, as I am also eager to delve into the world of app development, particularly
-                        with platforms like Flutter or React Native.</p>
+                <div class="grid md:grid-cols-5">
+                    <div class="grid grid-cols-1 place-items-center md:col-span-2">
+                        <img src="images/body/hamzah.jpeg" alt="me" class="w-[60%] md:w-[80%] h-auto rounded-[4%]">
+                    </div>
+                    <div class="text-center mt-8 md:mt-0 md:text-left md:col-span-3 place-content-center">
+                        <h4 class="font-bold text-xl md:text-2xl lg:text-3xl">I'm Hamzah Chhapra, a Software Developer
+                        </h4>
+                        <p class="text-md md:text-lg lg:text-xl">I am currently in my final year of BCA studies from
+                            Manipal
+                            University Jaipur, I find great joy in designing and developing websites. However, my
+                            ambitions
+                            extend beyond the web, as I am also eager to delve into the world of app development,
+                            particularly with platforms like Flutter or React Native.</p>
+                    </div>
                 </div>
             </div>
-            <div class="flex justify-center py-5">
-                <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">My Skills</h1>
-            </div>
-            <div class="flex flex-wrap gap-8 md:flex-nowrap justify-center">
-                <!-- CARD 1 -->
-                <div class="w-10/12 lg:w-4/12 max-lg:relative">
-                    <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
-                        <div
-                            class="flip-card-inner w-full h-full transition-transform duration-600 [transform-style:preserve-3d]">
-                            <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
-                                <img src="images/cards/Design-tools-bro.svg" alt="Design-tools"
-                                    class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
-                            </div>
+            <div id="skills">
+                <div class="flex justify-center py-5">
+                    <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">My Skills</h1>
+                </div>
+                <div class="flex flex-wrap gap-8 md:flex-nowrap justify-center">
+                    <!-- CARD 1 -->
+                    <div class="w-10/12 lg:w-4/12 max-lg:relative hover:scale-110 duration-300">
+                        <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
                             <div
-                                class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
-                                <div>
-                                    <h2 class="text-center font-['Lora'] font-bold text-2xl lg:text-3xl">
-                                        Designing</h2>
-                                    <hr />
-                                    <h3 class="text-center font-['Lora'] text-2xl lg:text-3xl">
-                                        Figma<br>Balsamiq</h3>
+                                class="flip-card-inner w-full h-full transition-transform duration-500 [transform-style:preserve-3d]">
+                                <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
+                                    <img src="images/cards/Design-tools-bro.svg" alt="Design-tools"
+                                        class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
+                                </div>
+                                <div
+                                    class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
+                                    <div>
+                                        <h2 class="text-center font-[Montserrat] font-bold text-2xl lg:text-3xl">
+                                            Designing</h2>
+                                        <hr />
+                                        <h3 class="text-center font-[Montserrat] text-2xl lg:text-3xl">
+                                            Figma<br>Balsamiq</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- CARD 2 -->
-                <div class="w-10/12 lg:w-4/12 max-lg:relative">
-                    <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
-                        <div
-                            class="flip-card-inner w-full h-full transition-transform duration-600 [transform-style:preserve-3d]">
-                            <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
-                                <img src="images/cards/Programming-bro.svg" alt="Programming"
-                                    class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
-                            </div>
+                    <!-- CARD 2 -->
+                    <div class="w-10/12 lg:w-4/12 max-lg:relative hover:scale-110 duration-300">
+                        <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
                             <div
-                                class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
-                                <div>
-                                    <h2 class="text-center font-['Lora'] font-bold text-2xl lg:text-3xl">
-                                        Programming</h2>
-                                    <hr>
-                                    <h3 class="text-center font-['Lora'] text-2xl lg:text-3xl">
-                                        C/C++<br>
-                                        JavaScript<br>
-                                        Python<br>
-                                        Dart
-                                    </h3>
+                                class="flip-card-inner w-full h-full transition-transform duration-500 [transform-style:preserve-3d]">
+                                <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
+                                    <img src="images/cards/Programming-bro.svg" alt="Programming"
+                                        class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
+                                </div>
+                                <div
+                                    class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
+                                    <div>
+                                        <h2 class="text-center font-[Montserrat] font-bold text-2xl lg:text-3xl">
+                                            Programming</h2>
+                                        <hr>
+                                        <h3 class="text-center font-[Montserrat] text-2xl lg:text-3xl">
+                                            C/C++<br>
+                                            JavaScript<br>
+                                            Python<br>
+                                            Dart
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- CARD 3 -->
-                <div class="w-10/12 lg:w-4/12 max-lg:relative">
-                    <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
-                        <div
-                            class="flip-card-inner w-full h-full transition-transform duration-600 [transform-style:preserve-3d]">
-                            <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
-                                <img src="images/cards/Collab-bro.svg" alt="System-tools"
-                                    class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
-                            </div>
+                    <!-- CARD 3 -->
+                    <div class="w-10/12 lg:w-4/12 max-lg:relative hover:scale-110 duration-300">
+                        <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
                             <div
-                                class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
-                                <div>
-                                    <h2 class="text-center font-['Lora'] font-bold text-2xl lg:text-3xl">
-                                        Tools</h2>
-                                    <hr>
-                                    <h3 class="text-center font-['Lora'] text-2xl lg:text-3xl">
-                                        git<br>Github<br>bash<br>zsh</h3>
+                                class="flip-card-inner w-full h-full transition-transform duration-500 [transform-style:preserve-3d]">
+                                <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
+                                    <img src="images/cards/Collab-bro.svg" alt="System-tools"
+                                        class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
+                                </div>
+                                <div
+                                    class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
+                                    <div>
+                                        <h2 class="text-center font-[Montserrat] font-bold text-2xl lg:text-3xl">
+                                            Tools</h2>
+                                        <hr>
+                                        <h3 class="text-center font-[Montserrat] text-2xl lg:text-3xl">
+                                            git<br>Github<br>bash<br>zsh</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- END OF CARDS -->
                 </div>
-                <!-- END OF CARDS -->
             </div>
         </div>
     </section>
 
     <!-- THIRD PAGE -->
-    <section id="contact" class="h-[85vh] flex flex-col justify-center items-center bg-[#D2E9E9]">
+    <section id="contact" class="h-[85vh] flex flex-col justify-center items-center">
         <div class="flex justify-center py-5">
             <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">Want to ask something?</h1>
         </div>
@@ -246,7 +254,7 @@
             <h3><strong>Email</strong></h3>
         </div>
         <div class="flex justify-center">
-            <p>chhaprahamzah@gmail.com</p>
+            <a href="mailto:chhaprahamzah@gmail.com" target="_blank">chhaprahamzah@gmail.com</a>
         </div>
     </section>
 
@@ -276,6 +284,10 @@
         <div class="three">#E3F4F4</div>
         <div class="four">#F8F6F4</div>
     -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+
     <script src="main.js"></script>
 </body>
 

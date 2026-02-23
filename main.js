@@ -1,3 +1,36 @@
+// gsap code
+gsap.registerPlugin(ScrollTrigger);
+
+let tl = gsap.timeline();
+
+tl.from("#title, #navToggle, #navMenu, #home-content", {
+    delay: 0.2,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+});
+
+gsap.from("#about-content", {
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: {
+        trigger:"#about-content",
+        scroller:"body",
+        start: "top 50%",
+        markers:true
+    },
+});
+gsap.from("#skills", {
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: {
+        trigger:"#skills",
+        scroller:"body",
+        start: "top 65%",
+        markers:true
+    },
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // Flip cards functionality
     var flipCards = document.querySelectorAll(".flip-card");
