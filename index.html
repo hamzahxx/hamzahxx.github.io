@@ -37,6 +37,24 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2309090b'/><text x='50' y='73' font-size='68' text-anchor='middle' fill='%23d9a441' font-family='monospace' font-weight='bold'>H</text></svg>" />
 
+  <!-- Preloader (inline CSS so it paints on first byte, before the bundle loads) -->
+  <style>
+    #preload { position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px; background: #0b0b0c;
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+      transition: opacity .45s ease; }
+    #preload.is-done { opacity: 0; pointer-events: none; }
+    #preload .pl-wm { color: #ece6da; font-size: 15px; letter-spacing: .28em; }
+    #preload .pl-wm b { color: #d9a441; font-weight: 400; }
+    #preload .pl-bar { position: relative; width: 150px; height: 2px;
+      background: rgba(236,230,218,.12); overflow: hidden; }
+    #preload .pl-bar::after { content: ""; position: absolute; top: 0; bottom: 0; left: -45%;
+      width: 45%; background: #d9a441; animation: plsweep 1s ease-in-out infinite; }
+    #preload .pl-cap { color: #9a968d; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; }
+    @keyframes plsweep { 0% { left: -45%; } 100% { left: 100%; } }
+    @media (prefers-reduced-motion: reduce) { #preload .pl-bar::after { animation: none; left: 0; width: 100%; } }
+  </style>
+
   <!-- Fonts (async, non-render-blocking so first paint never waits on Google) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,6 +70,11 @@
 </head>
 
 <body>
+  <div id="preload" aria-hidden="true">
+    <div class="pl-wm">hamzahcodes<b>.</b>in</div>
+    <div class="pl-bar"></div>
+    <div class="pl-cap">initializing</div>
+  </div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
