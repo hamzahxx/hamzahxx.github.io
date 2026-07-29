@@ -22,26 +22,26 @@ export default function App() {
     const ctx = gsap.context(() => {
       // Hero intro — the datasheet "boots" in and settles, its rows populate,
       // then the left column rises in.
+      // Overlapping (not sequential) so the headline appears fast and the
+      // nav never gates the rest. Position params are absolute timeline times.
       gsap
-        .timeline({ defaults: { ease: "power3.out" }, delay: 0.15 })
-        .from("[data-nav]", { y: -18, opacity: 0, duration: 0.6 })
-        .from("[data-hud]", { opacity: 0, duration: 0.5 }, "<")
-        .from("[data-card]", {
-          y: -28,
-          opacity: 0,
-          scale: 0.97,
-          duration: 0.55,
-          ease: "back.out(1.4)",
-        })
-        .from(
-          "[data-row]",
-          { y: 8, opacity: 0, duration: 0.3, stagger: 0.07 },
-          "-=0.15"
-        )
+        .timeline({ defaults: { ease: "power3.out" } })
+        .from("[data-nav]", { y: -16, opacity: 0, duration: 0.5 }, 0)
+        .from("[data-hud]", { opacity: 0, duration: 0.6 }, 0)
         .from(
           "[data-hero]",
-          { y: 24, opacity: 0, duration: 0.6, stagger: 0.1 },
-          "-=0.2"
+          { y: 24, opacity: 0, duration: 0.6, stagger: 0.08 },
+          0.08
+        )
+        .from(
+          "[data-card]",
+          { y: -24, opacity: 0, scale: 0.97, duration: 0.5, ease: "back.out(1.4)" },
+          0.12
+        )
+        .from(
+          "[data-row]",
+          { y: 8, opacity: 0, duration: 0.3, stagger: 0.06 },
+          0.4
         );
 
       // Scroll reveals for everything tagged [data-reveal].
