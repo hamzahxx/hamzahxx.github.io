@@ -1,31 +1,50 @@
-<h1 align="center">Hi 👋, I'm Hamzah Chhapra</h1>
-<h3 align="center">A passionate frontend web developer who enjoys designing and developing.</h3>
+# hamzahcodes.in
 
-- 🔭 I’m currently working on **a personal site which should be out soon**
+Personal portfolio of **Hamzah Chhapra** — developer & product manager.
+Live at **[hamzahcodes.in](https://hamzahcodes.in)** (served from this GitHub user site).
 
-- 🌱 I’m currently studying **for my upcoming college exams and will soon get back on frontend**
+Dark, editorial "engineer's datasheet" look — Fraunces + Space Mono + Inter, single gold accent.
 
-- 👯 I’m looking to collaborate on **big projects which will help me improve my collaboration skills as well as my portfolio**
+## Stack
 
-- 👨‍💻 Some of my projects are available at [https://hamzahxx.github.io/projectHamzah](https://hamzahxx.github.io/projectHamzah)
+- **React 19** + **Vite** — single-page app, zero routing
+- **Tailwind CSS v4** (`@tailwindcss/vite`)
+- **GSAP** (+ ScrollTrigger) for the intro and scroll reveals
 
-- 💬 Ask me about **Bootstrap, HTML, CSS and git (Version Control)**
+## Develop
 
-- 📫 How to reach me **chhaprahamzah@gmail.com**
+```bash
+npm install
+npm run dev        # http://localhost:5173  (HMR)
+npm run build      # -> dist/
+npm run preview    # serve the production build locally
+```
 
-- ⚡ Fun fact **I am lazyyy**
+## Editing content
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/team7obito7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="team7obito7" height="30" width="40" /></a>
-<a href="https://fb.com/hamzahxx" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="hamzahxx" height="30" width="40" /></a>
-</p>
+All copy lives in one file — **`src/data.js`** (profile, hero datasheet, about,
+experience, skills, projects). Edit there; the page updates live. No content is
+hard-coded in components except section headings.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
-    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-    <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/></a>
-    <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a>
-    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-</p>
+## Structure
+
+```
+index.html            Vite entry (fonts, meta, favicon)
+src/
+  main.jsx            React root
+  index.css           Tailwind + theme tokens (colors, fonts, grid, crop marks)
+  data.js             ← all site content
+  App.jsx             layout + GSAP setup
+  components/         Nav, Hero, About, Experience, Skills, Projects, Contact, Footer
+public/
+  assets/hamzah-cv.pdf
+  images/             photo + social icons
+  CNAME               hamzahcodes.in
+```
+
+## Deploy
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and
+publishes `dist/` to GitHub Pages.
+
+One-time setup: **repo Settings → Pages → Source = GitHub Actions**.

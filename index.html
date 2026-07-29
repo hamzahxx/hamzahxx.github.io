@@ -2,293 +2,54 @@
 <html lang="en">
 
 <head>
-    <!-- RESPONSIBILITY -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ICON AND TITLE -->
-    <title>hamzahcodes.in</title>
-    <link rel="icon" href="https://hamzahxx.github.io/sample-code/assets/wbg/1.png" type="image/icon type">
-    <meta name="description"
-        content="Hamzah Chhapra | Full-Stack Developer Portfolio
-    Explore my creative and technical expertise in Full-Stack development through projects, skills, and insights. Designed to showcase my journey and passion for coding. Connect with me via socials to collaborate or discuss opportunities. 🌟 Visit hamzahxx.github.io">
+  <title>Hamzah Chhapra — Developer & Product Manager</title>
+  <meta name="description"
+    content="Hamzah Chhapra — a developer and product manager building things that ship. Full-time Product Management Trainee at The Souled Store, where I manage customer-facing products and build internal tools end to end." />
+  <meta name="author" content="Hamzah Chhapra" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="canonical" href="https://hamzahcodes.in/" />
 
-    <!-- PREVIEW TAGS -->
-    <meta property="og:title" content="Hamzah Chhapra, A Full-Stack Developer.">
-    <meta property="og:description"
-        content="Hamzah Chhapra | Full-Stack Developer Portfolio
-    Explore my creative and technical expertise in Full-Stack development through projects, skills, and insights. Designed to showcase my journey and passion for coding. Connect with me via socials to collaborate or discuss opportunities. 🌟 Visit hamzahxx.github.io">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://hamzahxx.github.io/sample-code/assets/preview/hamzahxx.github.png">
-    <meta property="og:url" content="https://hamzahxx.github.io/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hamzah Chhapra — Developer & Product Manager" />
+  <meta property="og:description"
+    content="A developer and product manager building things that ship. Full-time at The Souled Store — I manage customer-facing products and build internal tools end to end." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hamzahcodes.in/" />
+  <meta property="og:site_name" content="hamzahcodes.in" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://hamzahcodes.in/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Hamzah Chhapra — Developer & Product Manager. Building things that ship." />
 
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="QLNRgMhYCXUZX7J6Ql2n9mAReccEwpQ0VoUBXYYb80o" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hamzah Chhapra — Developer & Product Manager" />
+  <meta name="twitter:description"
+    content="A developer and product manager building things that ship. Full-time at The Souled Store." />
+  <meta name="twitter:image" content="https://hamzahcodes.in/og.png" />
+  <meta name="twitter:creator" content="@copypastecoder7" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2309090b'/><text x='50' y='73' font-size='68' text-anchor='middle' fill='%23d9a441' font-family='monospace' font-weight='bold'>H</text></svg>" />
 
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <meta name="google-site-verification" content="QLNRgMhYCXUZX7J6Ql2n9mAReccEwpQ0VoUBXYYb80o" />
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-[10px] z-[1000] p-3">
-        <div class="max-w-[1320px] mx-auto px-8 py-3 flex justify-between items-center">
-            <a id="title" href="/" class="font-[Montserrat] font-bold text-xl">
-                hamzahcodes.in
-            </a>
-
-            <button class="hidden max-lg:block bg-transparent border-none cursor-pointer p-2 z-[1001]" id="navToggle"
-                aria-label="Toggle navigation">
-                <span
-                    class="hamburger block w-[30px] h-[2px] bg-[#2c3e50] relative transition-[background-color] duration-300 before:content-[''] before:absolute before:w-[30px] before:h-[2px] before:bg-[#2c3e50] before:transition-all before:duration-300 before:top-[-0.5rem] after:content-[''] after:absolute after:w-[30px] after:h-[2px] after:bg-[#2c3e50] after:transition-all after:duration-300 after:bottom-[-8px]"></span>
-            </button>
-
-            <ul class="flex list-none m-0 p-0 gap-8 items-center max-lg:fixed max-lg:top-0 max-lg:left-[-100%] max-lg:w-[80%] max-lg:max-w-[350px] max-lg:h-screen max-lg:bg-[#E3F4F4] max-lg:flex-col max-lg:pt-24 max-lg:px-8 max-lg:pb-8 max-lg:gap-0 max-lg:shadow-[2px_0_20px_rgba(0,0,0,0.2)] max-lg:transition-[left] max-lg:duration-300 max-lg:overflow-y-auto"
-                id="navMenu">
-                <li class="hidden max-lg:block w-full absolute top-8 left-0 px-8">
-                    <a href="/" class="font-[Montserrat] font-bold text-2xl text-[#2c3e50]">
-                        hamzahcodes.in
-                    </a>
-                </li>
-                <li class="relative max-lg:w-full max-lg:border-b max-lg:border-[rgba(0,0,0,0.1)]">
-                    <a href="#home"
-                        class="no-underline text-[#2c3e50] font-[Montserrat] font-normal text-base flex items-center gap-2 py-2 transition-colors duration-300 hover:text-[#1a1a1a] max-lg:py-5 max-lg:text-lg [&>span]:relative [&>span]:after:content-[''] [&>span]:after:absolute [&>span]:after:bottom-[-5px] [&>span]:after:left-0 [&>span]:after:w-0 [&>span]:after:h-[2px] [&>span]:after:bg-[#2c3e50] [&>span]:after:transition-[width] [&>span]:after:duration-300 hover:[&>span]:after:w-full">
-                        <img src="images/nav/house-fill.svg" alt="" class="w-5 h-5 hidden max-lg:block">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li class="relative max-lg:w-full max-lg:border-b max-lg:border-[rgba(0,0,0,0.1)]">
-                    <a href="#about"
-                        class="no-underline text-[#2c3e50] font-[Montserrat] font-normal text-base flex items-center gap-2 py-2 transition-colors duration-300 hover:text-[#1a1a1a] max-lg:py-5 max-lg:text-lg [&>span]:relative [&>span]:after:content-[''] [&>span]:after:absolute [&>span]:after:bottom-[-5px] [&>span]:after:left-0 [&>span]:after:w-0 [&>span]:after:h-[2px] [&>span]:after:bg-[#2c3e50] [&>span]:after:transition-[width] [&>span]:after:duration-300 hover:[&>span]:after:w-full">
-                        <img src="images/nav/person-fill.svg" alt="" class="w-5 h-5 hidden max-lg:block">
-                        <span>About</span>
-                    </a>
-                </li>
-                <li class="relative max-lg:w-full max-lg:border-b max-lg:border-[rgba(0,0,0,0.1)]">
-                    <a href="https://github.com/hamzahxx?tab=repositories" target="_blank"
-                        class="no-underline text-[#2c3e50] font-[Montserrat] font-normal text-base flex items-center gap-2 py-2 transition-colors duration-300 hover:text-[#1a1a1a] max-lg:py-5 max-lg:text-lg [&>span]:relative [&>span]:after:content-[''] [&>span]:after:absolute [&>span]:after:bottom-[-5px] [&>span]:after:left-0 [&>span]:after:w-0 [&>span]:after:h-[2px] [&>span]:after:bg-[#2c3e50] [&>span]:after:transition-[width] [&>span]:after:duration-300 hover:[&>span]:after:w-full">
-                        <img src="images/nav/briefcase-fill.svg" alt="" class="w-5 h-5 hidden max-lg:block">
-                        <span>Projects</span>
-                    </a>
-                </li>
-                <li class="relative max-lg:w-full max-lg:border-b max-lg:border-[rgba(0,0,0,0.1)]">
-                    <a href="#contact"
-                        class="no-underline text-[#2c3e50] font-[Montserrat] font-normal text-base flex items-center gap-2 py-2 transition-colors duration-300 hover:text-[#1a1a1a] max-lg:py-5 max-lg:text-lg [&>span]:relative [&>span]:after:content-[''] [&>span]:after:absolute [&>span]:after:bottom-[-5px] [&>span]:after:left-0 [&>span]:after:w-0 [&>span]:after:h-[2px] [&>span]:after:bg-[#2c3e50] [&>span]:after:transition-[width] [&>span]:after:duration-300 hover:[&>span]:after:w-full">
-                        <img src="images/nav/envelope-fill.svg" alt="" class="w-5 h-5 hidden max-lg:block">
-                        <span>Contact</span>
-                    </a>
-                </li>
-                <li class="relative max-lg:w-full max-lg:border-b-0 max-lg:mt-4">
-                    <a href="assets/hamzah-cv.pdf" target="_blank"
-                        class="no-underline text-[#2c3e50] font-[Montserrat] font-normal text-base flex items-center gap-2 py-2 px-6 border-2 border-[#2c3e50] rounded-[5px] transition-all duration-300 hover:bg-[#2c3e50] hover:text-white [&>span]:after:!hidden max-lg:w-full max-lg:justify-center max-lg:bg-[#2c3e50] max-lg:text-white">
-                        <img src="images/nav/file-earmark-text-fill.svg" alt=""
-                            class="w-5 h-5 hidden max-lg:block max-lg:brightness-0 max-lg:invert">
-                        <span>Resume</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- FRONT PAGE -->
-    <section id="home" class="pt-36 overflow-hidden" aria-label="Hero section">
-        <div id="home-content" class="grid grid-cols-1 md:grid-cols-2">
-            <div class="p-3 md:p-10 md:py-16">
-                <p class="font-[Montserrat] text-[23px] mb-2 pl-1">Hello, my name is</p>
-                <h1 class="text-[400%] leading-[90%] font-[Montserrat] font-bold max-md:text-[300%] mb-2">Hamzah
-                    <br />
-                    <span class="font-light">
-                        Chhapra
-                    </span>
-                </h1>
-                <div class="wrapper font-[Montserrat] text-[23px] flex flex-nowrap whitespace-nowrap pl-1">
-                    <div class="static-txt">I am a</div>
-                    <ul
-                        class="font-bold overflow-hidden h-[33px] leading-[35px] mb-0 pl-[7px] [&>li]:list-none [&>li]:relative [&>li]:top-0 [&>li]:animate-[slide_9s_steps(3)_infinite] [&>li]:after:content-[''] [&>li]:after:absolute [&>li]:after:bg-[#E3F4F4] [&>li]:after:left-0 [&>li]:after:h-full [&>li]:after:w-full [&>li]:after:animate-[typing_3s_steps(100)_infinite]">
-                        <li><span>Full-Stack Engineer</span></li>
-                        <li><span>Systems Thinker</span></li>
-                        <li><span>BCA Undergrad</span></li>
-                    </ul>
-                </div>
-                <div class="flex ms-2">
-                    <a href="https://x.com/copypastecoder7" aria-label="Follow me on X (Twitter)" target="_blank"
-                        class="transition-all duration-300 hover:opacity-70 hover:scale-110"><img src="images/svg/x.svg"
-                            alt="x-copypastecoder7" class="w-10 mt-2.5 mr-[30px]"></a>
-                    <a href="https://github.com/hamzahxx" aria-label="Check out my Github Profile" target="_blank"
-                        class="transition-all duration-300 hover:opacity-70 hover:scale-110"><img
-                            src="images/svg/github.svg" alt="github-hamzahxx" class="w-10 mt-2.5 mr-[30px]"></a>
-                    <a href="https://www.linkedin.com/in/hamzahchhapra/" aria-label="Connect with me on LinkedIn"
-                        target="_blank" class="transition-all duration-300 hover:opacity-70 hover:scale-110"><img
-                            src="images/svg/linkedin.svg" alt="linkedin-hamzahchhapra"
-                            class="w-10 mt-2.5 mr-[30px]"></a>
-                </div>
-            </div>
-            <!-- IMAGE -->
-            <div class="flex justify-end min-w-full md:min-w-[40vw] md:justify-center">
-                <img id="hero-image" src="images/hero/frontpage.png" alt="Hamzah Chhapra"
-                    class="border-b-2 border-black object-contain h-[90vh] md:h-[85vh] max-lg:h-[102vh]">
-            </div>
-        </div>
-    </section>
-
-    <!-- SECOND PAGE -->
-    <section id="about" class="bg-[#f8f6f4]">
-        <div class="container mx-auto px-4 py-12">
-            <div id="about-content">
-                <div class="flex justify-center py-5">
-                    <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">About me</h1>
-                </div>
-                <div class="grid md:grid-cols-5">
-                    <div class="grid grid-cols-1 place-items-center md:col-span-2">
-                        <img src="images/body/hamzah.jpeg" alt="me" class="w-[60%] md:w-[80%] h-auto rounded-[4%]">
-                    </div>
-                    <div class="text-center mt-8 md:mt-0 md:text-left md:col-span-3 place-content-center">
-                        <h4 class="font-bold text-xl md:text-2xl lg:text-3xl">I'm Hamzah Chhapra, a Software Developer
-                        </h4>
-                        <p class="text-md md:text-lg lg:text-xl">I am currently in my final year of BCA studies from
-                            Manipal
-                            University Jaipur, I find great joy in designing and developing websites. However, my
-                            ambitions
-                            extend beyond the web, as I am also eager to delve into the world of app development,
-                            particularly with platforms like Flutter or React Native.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="skills">
-                <div class="flex justify-center py-5">
-                    <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">My Skills</h1>
-                </div>
-                <div class="flex flex-wrap gap-8 md:flex-nowrap justify-center">
-                    <!-- CARD 1 -->
-                    <div class="w-10/12 lg:w-4/12 max-lg:relative hover:scale-110 duration-300">
-                        <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
-                            <div
-                                class="flip-card-inner w-full h-full transition-transform duration-500 [transform-style:preserve-3d]">
-                                <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
-                                    <img src="images/cards/Design-tools-bro.svg" alt="Design-tools"
-                                        class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
-                                </div>
-                                <div
-                                    class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
-                                    <div>
-                                        <h2 class="text-center font-[Montserrat] font-bold text-2xl lg:text-3xl">
-                                            Designing</h2>
-                                        <hr />
-                                        <h3 class="text-center font-[Montserrat] text-2xl lg:text-3xl">
-                                            Figma<br>Balsamiq</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CARD 2 -->
-                    <div class="w-10/12 lg:w-4/12 max-lg:relative hover:scale-110 duration-300">
-                        <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
-                            <div
-                                class="flip-card-inner w-full h-full transition-transform duration-500 [transform-style:preserve-3d]">
-                                <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
-                                    <img src="images/cards/Programming-bro.svg" alt="Programming"
-                                        class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
-                                </div>
-                                <div
-                                    class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
-                                    <div>
-                                        <h2 class="text-center font-[Montserrat] font-bold text-2xl lg:text-3xl">
-                                            Programming</h2>
-                                        <hr>
-                                        <h3 class="text-center font-[Montserrat] text-2xl lg:text-3xl">
-                                            C/C++<br>
-                                            JavaScript<br>
-                                            Python<br>
-                                            Dart
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CARD 3 -->
-                    <div class="w-10/12 lg:w-4/12 max-lg:relative hover:scale-110 duration-300">
-                        <div class="flip-card h-full aspect-square perspective-[1000px] cursor-pointer">
-                            <div
-                                class="flip-card-inner w-full h-full transition-transform duration-500 [transform-style:preserve-3d]">
-                                <div class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2]">
-                                    <img src="images/cards/Collab-bro.svg" alt="System-tools"
-                                        class="w-3/4 h-3/4 relative top-[12.5%] left-[12.5%]">
-                                </div>
-                                <div
-                                    class="absolute w-full h-full [backface-visibility:hidden] bg-[#f2f2f2] [transform:rotateY(180deg)] flex items-center justify-center">
-                                    <div>
-                                        <h2 class="text-center font-[Montserrat] font-bold text-2xl lg:text-3xl">
-                                            Tools</h2>
-                                        <hr>
-                                        <h3 class="text-center font-[Montserrat] text-2xl lg:text-3xl">
-                                            git<br>Github<br>bash<br>zsh</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END OF CARDS -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THIRD PAGE -->
-    <section id="contact" class="h-[85vh] flex flex-col justify-center items-center">
-        <div class="flex justify-center py-5">
-            <h1 class="text-2xl md:text-3xl font-bold border-black border-b pt-12 mb-8">Want to ask something?</h1>
-        </div>
-        <div class="container mx-auto px-4 flex justify-center">
-            <div>
-                <img src="images/body/blob.svg" alt="blob-svg" class="w-[200px] relative bottom-[30px] left-2">
-            </div>
-            <img src="images/body/email.png" alt="mail-png" class="w-[130px] h-[130px] absolute mb-5">
-        </div>
-        <div class="flex justify-center">
-            <h3><strong>Email</strong></h3>
-        </div>
-        <div class="flex justify-center">
-            <a href="mailto:chhaprahamzah@gmail.com" target="_blank">chhaprahamzah@gmail.com</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <div class="bg-[#D2E9E9]">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-row justify-between py-4 border-t border-black">
-                <p class="mb-3 md:mb-0 text-gray-600">Designed and Engineered by Hamzah</p>
-                <ul class="list-none flex gap-4">
-                    <li class=""><a class="text-gray-600" href="https://x.com/copypastecoder7" target="_blank"><img
-                                src="images/svg/x.svg" class="bi" alt="x-copypastecoder7" width="24" height="24"></a>
-                    </li>
-                    <li class=""><a class="text-gray-800" href="https://instagram.com/hxmzxhxx" target="_blank"><img
-                                src="images/svg/instagram.svg" class="bi" alt="instagram-hamzahxx" width="24"
-                                height="24"></a></li>
-                    <li class=""><a class="text-gray-800" href="https://www.facebook.com/hamzahxx" target="_blank"><img
-                                src="images/svg/facebook.svg" class="bi" alt="facebook-hamzahxx" width="24"
-                                height="24"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- COLOR PALLET -->
-    <!--
-        <div class="one">#C4DFDF</div>
-        <div class="two">#D2E9E9</div>
-        <div class="three">#E3F4F4</div>
-        <div class="four">#F8F6F4</div>
-    -->
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-
-    <script src="main.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
